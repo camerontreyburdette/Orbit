@@ -1,0 +1,34 @@
+#confirm-root .overlay { z-index: 300; }
+
+.confirm-box {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 20px;
+  width: 380px;
+  max-width: 92vw;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.confirm-box p { word-wrap: break-word; }
+.confirm-actions { display: flex; justify-content: flex-end; gap: 8px; }
+
+.dialog-box { gap: 12px; }
+.dialog-box h3 { font-size: 15px; font-weight: 700; }
+.dialog-box textarea { resize: none; }
+
+.dialog-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.dialog-head h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+}
+

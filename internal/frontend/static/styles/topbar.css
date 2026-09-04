@@ -1,0 +1,114 @@
+#topbar {
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 12px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  z-index: 40;
+}
+
+#topbar[hidden] { display: none; }
+
+#topbar-context {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  flex: 1;
+}
+
+.topbar-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.tag-search-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 28px;
+  background: var(--panel-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.tag-search-wrap:focus-within { outline: 2px solid var(--focus); outline-offset: -1px; }
+
+.tag-search-input {
+  width: 200px;
+  height: 26px;
+  padding: 0 10px;
+  font-size: 13px;
+  background: none;
+  border: none;
+  transition: opacity 0.15s ease;
+}
+
+.tag-search-input:focus { outline: none; }
+
+.tag-search-wrap.enter { animation: tag-search-fade 0.15s ease; }
+.tag-search-wrap.enter .tag-search-input { animation: fade-in 0.15s ease; }
+
+@keyframes tag-search-fade {
+  from { background-color: transparent; border-color: transparent; }
+}
+
+.tag-search-wrap.closing {
+  background-color: transparent;
+  border-color: transparent;
+  pointer-events: none;
+}
+
+.tag-search-wrap.closing:focus-within { outline: none; }
+.tag-search-wrap.closing .tag-search-input { opacity: 0; }
+.tag-search-wrap.closing .tag-suggest { display: none; }
+
+.tag-search-wrap.collapsed {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.tag-search-wrap.collapsed .tag-search-input { display: none; }
+
+.tag-search-wrap.open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.tag-search-wrap .tag-search-button { width: 27px; height: 26px; border-radius: 2px; }
+
+.tag-search-wrap .tag-suggest {
+  left: -1px;
+  right: -1px;
+  margin-top: 0;
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.tag-search-wrap .tag-option { font-size: 13px; }
+
+.tag-search-button.active { color: var(--text); background: var(--panel-3); }
+
+.topbar-name {
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.topbar-description {
+  color: var(--muted);
+  font-size: 12.5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+

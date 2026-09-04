@@ -1,0 +1,32 @@
+[data-theme="light"] .card.selected,
+[data-theme="light"] .list.selected {
+  background: rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.25);
+}
+
+.mass-edit-bar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.mass-edit-colors {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 6px;
+  height: 30px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.mass-edit-tags-box {
+  width: 440px;
+  max-width: 92vw;
+  gap: 0;
+}

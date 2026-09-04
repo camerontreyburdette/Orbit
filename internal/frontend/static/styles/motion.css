@@ -1,0 +1,55 @@
+.button, .icon-button, .composer-button, .attachment-actions button {
+  transition: background-color 0.15s ease, border-color 0.15s ease,
+    color 0.15s ease, opacity 0.12s ease;
+}
+
+.button:active, .icon-button:active { opacity: 0.65; }
+
+.card {
+  transition: border-color 0.15s ease, transform 0.12s ease,
+    box-shadow 0.15s ease, opacity 0.12s ease;
+}
+
+.card:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-card);
+}
+
+.board-tile {
+  transition: background-color 0.15s ease, border-color 0.15s ease,
+    transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+input, textarea, .search-box {
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade-out {
+  to { opacity: 0; }
+}
+
+.overlay { animation: fade-in 0.15s ease; }
+.modal, .confirm-box, .lightbox { animation: fade-in 0.15s ease; }
+#topbar { animation: fade-in 0.2s ease; }
+
+.home.enter, #lists.enter { animation: fade-in 0.18s ease; }
+
+.composer.enter { animation: fade-in 0.14s ease; }
+.card.enter { animation: fade-in 0.16s ease; }
+.card.highlight { animation: highlight-pulse 2.6s ease-in-out infinite; }
+.list.enter { animation: fade-in 0.18s ease; }
+.home.enter .board-tile:not(.pinned) { animation: fade-in 0.18s ease; }
+.attachment-item { animation: fade-in 0.15s ease; }
+.card-placeholder, .list-placeholder { animation: fade-in 0.12s ease; }
+
+.overlay.re-render, .modal.re-render, .modal.re-render .attachment-item { animation: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+

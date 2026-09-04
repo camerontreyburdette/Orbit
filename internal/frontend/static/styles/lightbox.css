@@ -1,0 +1,22 @@
+#lightbox-root .overlay { z-index: 200; }
+
+.lightbox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  max-width: 92vw;
+}
+
+.lightbox img, .lightbox video {
+  max-width: 90vw;
+  max-height: 78vh;
+  border-radius: var(--radius);
+  background: #000;
+}
+
+.lightbox audio { width: min(480px, 90vw); }
+.lightbox .lightbox-name { color: var(--text); font-weight: 600; word-break: break-all; text-align: center; }
+.lightbox .lightbox-actions { display: flex; gap: 8px; }
+.lightbox .loading { color: var(--muted); padding: 40px; }
+

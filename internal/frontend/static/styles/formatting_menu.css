@@ -1,0 +1,40 @@
+.format-menu {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  box-shadow: var(--shadow-tile);
+  z-index: 400;
+  animation: fade-in 0.12s ease;
+}
+
+.format-menu-button {
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  font-size: 13px;
+  line-height: 1;
+}
+
+.format-menu-button.bold { font-weight: 700; }
+.format-menu-button.italic { font-style: italic; }
+.format-menu-button.underline { text-decoration: underline; }
+.format-menu-button.strikethrough { text-decoration: line-through; }
+
+.format-menu-divider {
+  width: 1px;
+  height: 18px;
+  margin: 0 2px;
+  background: var(--border);
+}
+
+.format-menu-colors {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 6px;
+}

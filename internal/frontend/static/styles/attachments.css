@@ -1,0 +1,96 @@
+.attachment-wrap {
+  width: 100%;
+  margin: 0;
+  max-height: 358px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--tint);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.attachment-wrap:has(.attachment-empty) { border-style: dashed; }
+
+.attachment-empty {
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 12px;
+  text-align: center;
+}
+
+.add-file-button { font-size: 12px; padding: 3px 10px; font-weight: 400; }
+
+.attachment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.attachment-item {
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.attachment-preview {
+  position: relative;
+  height: 92px;
+  background: var(--panel-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.attachment-preview img { width: 100%; height: 100%; object-fit: cover; }
+.attachment-icon { color: var(--muted); }
+
+.play-badge {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.attachment-meta { padding: 6px 8px 2px; }
+.attachment-name {
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: text;
+}
+.attachment-name-input { width: 100%; font-size: 12px; padding: 2px 4px; }
+.attachment-size { color: var(--muted); font-size: 11px; }
+
+.attachment-item.cover { border-color: var(--text); }
+
+.cover-badge {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  font-size: 10px;
+  padding: 1px 5px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 2px;
+}
+
+.attachment-actions { display: flex; padding: 2px 4px 4px; }
+.attachment-actions button { flex: 1; padding: 3px; font-size: 12px; color: var(--muted); border-radius: 2px; }
+.attachment-actions button:hover { background: var(--panel-3); color: var(--text); }
+.attachment-actions button.danger:hover { color: var(--danger); }
+
+.checklist-add-checklist { margin-bottom: 8px; }
+

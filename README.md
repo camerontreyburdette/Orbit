@@ -1,2 +1,5 @@
 # Orbit
 No-nonsense kanban software for people who just want the shit to work.
+
+### - Requirements
+```Microsoft Edge WebView2 Runtime```
